@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "description": "An efficient utility for mass betrayal of circles.",
     "icons": {
-        "128": "icon.png",
-        "512": "large_icon.png"
+        "128": "icons/normal.png",
+        "512": "icons/large.png"
     },
     "manifest_version": 2
 }
