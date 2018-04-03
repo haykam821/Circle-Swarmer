@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+body {
+    font-family: 'Source Sans Pro', 'Ubuntu', sans-serif;
+    color: white;
+    background-color: #a80000;
+    text-align: center;
+    user-select: none;
+    border-style: none !important;
+    outline: none;
+}
