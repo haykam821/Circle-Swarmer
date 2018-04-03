@@ -2,5 +2,9 @@
     "name": "Circle Swarmer",
     "version": "1.0.0",
     "description": "An efficient utility for mass betrayal of circles.",
+    "icons": {
+        "128": "icon.png",
+        "512": "large_icon.png"
+    },
     "manifest_version": 2
 }
