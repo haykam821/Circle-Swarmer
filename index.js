@@ -39,7 +39,7 @@ $("#authReddit").click(() => {
     const state = Math.random();
     localStorage.setItem("state", state);
 
-    window.location = `https://www.reddit.com/api/v1/authorize?client_id=fQ1zEf_Qbepvcg&response_type=token&state=${state}&redirect_uri=chrome-extension://mdkndjinhmnajdmkbbjokgilfnojoahk/popup.html&scope=read%20vote`;
+    window.location = `https://www.reddit.com/api/v1/authorize?client_id=fQ1zEf_Qbepvcg&response_type=token&state=${state}&redirect_uri=chrome-extension://mdkndjinhmnajdmkbbjokgilfnojoahk/popup.html&scope=read%20vote%20identity`;
 });
 
 $("#icon").click(() => {
@@ -56,19 +56,17 @@ $("#swarmtool").submit(async event => {
         values[field.name] = field.value;
     });
 
+    const me = await r.getMe();
+
     const submission = await r.getSubmission(values.url.split("/")[6]).fetch().catch(() => {
         alert("Sorry, that might not be a valid circle URL though.");
     });
     if (submission.is_betrayed) {
         alert("Nice! That circle has already been betrayed.")
     } else {
-        console.log(stringify({
-            id: submission.id,
-            vote_key: values.key,
-        }))
         const keyGuess = await r.oauthRequest({
-            url: `https://www.reddit.com/api/guess_voting_key`,
-            method: "post",
+            url: `https://www.reddit.com/api/guess_voting_key.json`,
+            method: "POST",
             body: stringify({
                 id: submission.id,
                 vote_key: values.key,

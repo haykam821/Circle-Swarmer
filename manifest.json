@@ -13,5 +13,9 @@
             "background.js"
         ]
     },
-    "manifest_version": 2
+    "manifest_version": 2,
+    "permissions": [
+        "https://www.reddit.com/api/guess_voting_key.json",
+        "https://www.reddit.com/api/circle_vote.json"
+    ]
 }
