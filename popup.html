@@ -13,20 +13,16 @@
 		    width="150" height="150" alt="Swarm logo" draggable="false" />
 		<div>The Swarm</div>
 	</h1>
-	<form>
+	<button disabled="true" id="authReddit">Authenticate with Reddit</button>
+	<form id="swarmtool">
 		<label for="url">Circle URL</label>
 		<br/>
-		<input type="url" name="url" />
+		<input required type="url" name="url" value="https://www.reddit.com/r/CircleofTrust/comments/898kfh/me_myself_and_i/" />
 		<br/>
 		<br/>
 		<label for="key">Key</label>
 		<br/>
-		<input type="password" name="key" />
-		<br/>
-		<br/>
-		<label for="discord">Discord Name</label>
-		<br/>
-		<input type="text" name="discord" />
+		<input required type="password" name="key" value="AIDSISFUN" />
 		<br/>
 		<br/>
 		<input type="submit" id="checkPage" value="Swarm!" />
