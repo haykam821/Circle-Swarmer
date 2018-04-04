@@ -7,8 +7,11 @@
         "128": "icons/normal.png",
         "512": "icons/large.png"
     },
-    "browser_action": {
-        "default_popup": "popup.html"
+    "browser_action": {},
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
     },
     "manifest_version": 2
 }

@@ -8,3 +8,13 @@ body {
     border-style: none !important;
     outline: none;
 }
+
+h1>div {
+    font-size: 40px;
+    margin-top: -30px;
+}
+
+input,
+label {
+    font-size: 20px;
+}
