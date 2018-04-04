@@ -1,5 +1,5 @@
-document.getElementById("icon").addEventListener("click", () => {
+document.getElementById('icon').addEventListener('click', () => {
     chrome.tabs.create({
-        url: "https://discord.gg/4mAMtsT",
+        url: 'https://discord.gg/BmDexHw',
     });
 });
